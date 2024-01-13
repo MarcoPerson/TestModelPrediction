@@ -25,7 +25,3 @@ def predict(image_url: str):
 def predict_many_image(list_of_images_url: Annotated[list[str], Query()]):
     predictions = classifier.predict_multiple(list_of_images_url)
     return predictions
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("predict_microservices:app", reload = True)
