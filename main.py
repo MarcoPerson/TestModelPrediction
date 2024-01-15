@@ -10,7 +10,7 @@ from ImageClassifierPredictor import ImageClassifier
 model_path = 'model/inceptionv3_multi_label_model_All.pth'
 
 # Create an instance of the ImageClassifier
-classifier = None
+classifier = ImageClassifier(model_path)
     
 @app.get("/")
 def read_root():
