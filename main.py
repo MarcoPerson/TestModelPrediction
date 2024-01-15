@@ -10,11 +10,12 @@ from ImageClassifierPredictor import ImageClassifier
 model_path = 'model/inceptionv3_multi_label_model_All.pth'
 
 # Create an instance of the ImageClassifier
-classifier = ImageClassifier(model_path)
+classifier = None
     
 @app.get("/")
 def read_root():
     return {"Message": "Bienvenue sur le microservice de gestion du Model !"}
+
 
 @app.get("/predict_one_image")
 def predict(image_url: str):
